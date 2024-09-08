@@ -1,0 +1,133 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 1.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  2710 L
+    .__.ABS.                                                    =  0000 G
+    .__.CPU.                                                    =  0000 L
+    .__.H$L.                                                    =  0000 L
+  0 A$mainuild/main$100                                            0032 GR
+  0 A$mainuild/main$101                                            0035 GR
+  0 A$mainuild/main$102                                            0036 GR
+  0 A$mainuild/main$103                                            0037 GR
+  0 A$mainuild/main$104                                            0038 GR
+  0 A$mainuild/main$112                                            0039 GR
+  0 A$mainuild/main$4225                                           103B GR
+  0 A$mainuild/main$4226                                           103D GR
+  0 A$mainuild/main$4230                                           1040 GR
+  0 A$mainuild/main$4231                                           1042 GR
+  0 A$mainuild/main$4235                                           1045 GR
+  0 A$mainuild/main$4236                                           1048 GR
+  0 A$mainuild/main$4237                                           1049 GR
+  0 A$mainuild/main$4238                                           104B GR
+  0 A$mainuild/main$4239                                           104C GR
+  0 A$mainuild/main$4240                                           104D GR
+  0 A$mainuild/main$4241                                           1050 GR
+  0 A$mainuild/main$4242                                           1051 GR
+  0 A$mainuild/main$4246                                           1052 GR
+  0 A$mainuild/main$4250                                           1055 GR
+  0 A$mainuild/main$4251                                           1058 GR
+  0 A$mainuild/main$4255                                           105B GR
+  0 A$mainuild/main$4256                                           105E GR
+  0 A$mainuild/main$4260                                           1061 GR
+  0 A$mainuild/main$4261                                           1063 GR
+  0 A$mainuild/main$4265                                           1066 GR
+  0 A$mainuild/main$4266                                           1069 GR
+  0 A$mainuild/main$4267                                           106A GR
+  0 A$mainuild/main$4268                                           106D GR
+  0 A$mainuild/main$4269                                           106E GR
+  0 A$mainuild/main$4270                                           1071 GR
+  0 A$mainuild/main$4271                                           1072 GR
+  0 A$mainuild/main$4275                                           1073 GR
+  0 A$mainuild/main$4283                                           1076 GR
+  0 A$mainuild/main$4291                                           1079 GR
+  0 A$mainuild/main$68                                             0000 GR
+  0 A$mainuild/main$69                                             0004 GR
+  0 A$mainuild/main$70                                             0006 GR
+  0 A$mainuild/main$71                                             0009 GR
+  0 A$mainuild/main$72                                             000C GR
+  0 A$mainuild/main$73                                             000E GR
+  0 A$mainuild/main$74                                             0010 GR
+  0 A$mainuild/main$76                                             0013 GR
+  0 A$mainuild/main$77                                             0014 GR
+  0 A$mainuild/main$78                                             0015 GR
+  0 A$mainuild/main$82                                             0016 GR
+  0 A$mainuild/main$83                                             0017 GR
+  0 A$mainuild/main$84                                             0019 GR
+  0 A$mainuild/main$85                                             001A GR
+  0 A$mainuild/main$86                                             001B GR
+  0 A$mainuild/main$87                                             001C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 2.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 A$mainuild/main$88                                             0020 GR
+  0 A$mainuild/main$89                                             0022 GR
+  0 A$mainuild/main$90                                             0025 GR
+  0 A$mainuild/main$91                                             0026 GR
+  0 A$mainuild/main$92                                             0027 GR
+  0 A$mainuild/main$93                                             0028 GR
+  0 A$mainuild/main$94                                             0029 GR
+  0 A$mainuild/main$95                                             002B GR
+  0 A$mainuild/main$96                                             002E GR
+  0 A$mainuild/main$97                                             002F GR
+  0 A$mainuild/main$98                                             0030 GR
+  0 A$mainuild/main$99                                             0031 GR
+  0 C$main.c$11$0_0$23                                          =  0000 GR
+  0 C$main.c$12$1_0$23                                          =  0000 GR
+  0 C$main.c$13$2_0$24                                          =  0016 GR
+  0 C$main.c$15$1_0$23                                          =  0039 GR
+  0 C$main.c$21$1_0$25                                          =  103B GR
+  0 C$main.c$25$1_0$25                                          =  103B GR
+  0 C$main.c$27$1_0$25                                          =  1040 GR
+  0 C$main.c$30$1_0$25                                          =  1045 GR
+  0 C$main.c$34$1_0$25                                          =  1052 GR
+  0 C$main.c$37$1_0$25                                          =  1055 GR
+  0 C$main.c$38$1_0$25                                          =  105B GR
+  0 C$main.c$41$1_0$25                                          =  1061 GR
+  0 C$main.c$43$1_0$25                                          =  1066 GR
+  0 C$main.c$45$1_0$25                                          =  1073 GR
+  0 C$main.c$49$1_0$25                                          =  1076 GR
+  0 C$main.c$51$2_0$26                                          =  1076 GR
+  0 C$main.c$54$1_0$25                                          =  1079 GR
+  0 Fmain$__str_0$0_0$0                                         =  107B GR
+  0 G$main$0$0                                                  =  103B GR
+  0 G$put_text$0$0                                              =  0000 GR
+  0 G$tiles$0_0$0                                               =  003B GR
+  0 G$tiles_colors$0_0$0                                        =  083B GR
+  0 XG$main$0$0                                                 =  1079 GR
+  0 XG$put_text$0$0                                             =  0039 GR
+  0 ___str_0                                                       107B R
+  0 _main                                                          103B GR
+  0 _put_text                                                      0000 GR
+  0 _tiles                                                         003B GR
+  0 _tiles_colors                                                  083B GR
+    _ubox_disable_screen                                           **** GX
+    _ubox_enable_screen                                            **** GX
+    _ubox_fill_screen                                              **** GX
+    _ubox_init_isr                                                 **** GX
+    _ubox_put_tile                                                 **** GX
+    _ubox_set_colors                                               **** GX
+    _ubox_set_mode                                                 **** GX
+    _ubox_set_tiles                                                **** GX
+    _ubox_set_tiles_colors                                         **** GX
+    _ubox_wait                                                     **** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 3.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE                                      size 108A   flags    0
+   1 _DATA                                      size    0   flags    0
+   2 _INITIALIZED                               size    0   flags    0
+   3 _DABS                                      size    0   flags    8
+   4 _HOME                                      size    0   flags    0
+   5 _GSINIT                                    size    0   flags    0
+   6 _GSFINAL                                   size    0   flags    0
+   7 _INITIALIZER                               size    0   flags    0
+   8 _CABS                                      size    0   flags    8
+
