@@ -28,22 +28,24 @@ void main()
     //화면을 검은색으로 초기화
     //foreground, background, border
     ubox_set_colors(1,1,1);
-    
-    //초기화 로직 사이에 화면 활성화와 비활성화를 넣어둔다
-    //화면 접근을 일단 비활성화
+
+
+    //화면 그리기를 ubox_disable_screen()과 ubox_enable_screen()사이에 넣어둔다
+    //부분 갱신보다 전체를 한번에 그리는 효과
     ubox_disable_screen();
 
-    //???
+    //타일과 타일컬러 베이스 설정
     ubox_set_tiles(tiles);
     ubox_set_tiles_colors(tiles_colors);
 
     //특정 타일로 화면을 다 그림. arguemnt는 타일 인덱스.
     ubox_fill_screen(WHITESPACE_TILE);
+
     //hello, world 쓰기
     put_text(11, 11, "HELLO, WORLD!!");
+
     //화면 접근을 활성화
     ubox_enable_screen();
-
 
     //다 돌았으니 마지막 출력물을 보여주는 상태로 유지
     while(1)

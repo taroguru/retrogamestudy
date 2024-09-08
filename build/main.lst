@@ -4240,28 +4240,28 @@
    104D CDr00r00      [17] 4240 	call	_ubox_set_colors
    1050 F1            [10] 4241 	pop	af
    1051 33            [ 6] 4242 	inc	sp
-                     1052  4243 	C$main.c$34$1_0$25	= .
-                           4244 	.globl	C$main.c$34$1_0$25
-                           4245 ;main.c:34: ubox_disable_screen();
+                     1052  4243 	C$main.c$35$1_0$25	= .
+                           4244 	.globl	C$main.c$35$1_0$25
+                           4245 ;main.c:35: ubox_disable_screen();
    1052 CDr00r00      [17] 4246 	call	_ubox_disable_screen
-                     1055  4247 	C$main.c$37$1_0$25	= .
-                           4248 	.globl	C$main.c$37$1_0$25
-                           4249 ;main.c:37: ubox_set_tiles(tiles);
+                     1055  4247 	C$main.c$38$1_0$25	= .
+                           4248 	.globl	C$main.c$38$1_0$25
+                           4249 ;main.c:38: ubox_set_tiles(tiles);
    1055 21r3Br00      [10] 4250 	ld	hl, #_tiles
    1058 CDr00r00      [17] 4251 	call	_ubox_set_tiles
-                     105B  4252 	C$main.c$38$1_0$25	= .
-                           4253 	.globl	C$main.c$38$1_0$25
-                           4254 ;main.c:38: ubox_set_tiles_colors(tiles_colors);
+                     105B  4252 	C$main.c$39$1_0$25	= .
+                           4253 	.globl	C$main.c$39$1_0$25
+                           4254 ;main.c:39: ubox_set_tiles_colors(tiles_colors);
    105B 21r3Br08      [10] 4255 	ld	hl, #_tiles_colors
    105E CDr00r00      [17] 4256 	call	_ubox_set_tiles_colors
-                     1061  4257 	C$main.c$41$1_0$25	= .
-                           4258 	.globl	C$main.c$41$1_0$25
-                           4259 ;main.c:41: ubox_fill_screen(WHITESPACE_TILE);
+                     1061  4257 	C$main.c$42$1_0$25	= .
+                           4258 	.globl	C$main.c$42$1_0$25
+                           4259 ;main.c:42: ubox_fill_screen(WHITESPACE_TILE);
    1061 2E 81         [ 7] 4260 	ld	l, #0x81
    1063 CDr00r00      [17] 4261 	call	_ubox_fill_screen
-                     1066  4262 	C$main.c$43$1_0$25	= .
-                           4263 	.globl	C$main.c$43$1_0$25
-                           4264 ;main.c:43: put_text(11, 11, "HELLO, WORLD!!");
+                     1066  4262 	C$main.c$45$1_0$25	= .
+                           4263 	.globl	C$main.c$45$1_0$25
+                           4264 ;main.c:45: put_text(11, 11, "HELLO, WORLD!!");
    1066 21r7Br10      [10] 4265 	ld	hl, #___str_0
    1069 E5            [11] 4266 	push	hl
    106A 11 0B 0B      [10] 4267 	ld	de, #0x0b0b
@@ -4269,23 +4269,23 @@
    106E CDr00r00      [17] 4269 	call	_put_text
    1071 F1            [10] 4270 	pop	af
    1072 F1            [10] 4271 	pop	af
-                     1073  4272 	C$main.c$45$1_0$25	= .
-                           4273 	.globl	C$main.c$45$1_0$25
-                           4274 ;main.c:45: ubox_enable_screen();
+                     1073  4272 	C$main.c$48$1_0$25	= .
+                           4273 	.globl	C$main.c$48$1_0$25
+                           4274 ;main.c:48: ubox_enable_screen();
    1073 CDr00r00      [17] 4275 	call	_ubox_enable_screen
-                     1076  4276 	C$main.c$49$1_0$25	= .
-                           4277 	.globl	C$main.c$49$1_0$25
-                           4278 ;main.c:49: while(1)
+                     1076  4276 	C$main.c$51$1_0$25	= .
+                           4277 	.globl	C$main.c$51$1_0$25
+                           4278 ;main.c:51: while(1)
    1076                    4279 00102$:
-                     1076  4280 	C$main.c$51$2_0$26	= .
-                           4281 	.globl	C$main.c$51$2_0$26
-                           4282 ;main.c:51: ubox_wait();
+                     1076  4280 	C$main.c$53$2_0$26	= .
+                           4281 	.globl	C$main.c$53$2_0$26
+                           4282 ;main.c:53: ubox_wait();
    1076 CDr00r00      [17] 4283 	call	_ubox_wait
-                     1079  4284 	C$main.c$54$1_0$25	= .
-                           4285 	.globl	C$main.c$54$1_0$25
-                           4286 ;main.c:54: }
-                     1079  4287 	C$main.c$54$1_0$25	= .
-                           4288 	.globl	C$main.c$54$1_0$25
+                     1079  4284 	C$main.c$56$1_0$25	= .
+                           4285 	.globl	C$main.c$56$1_0$25
+                           4286 ;main.c:56: }
+                     1079  4287 	C$main.c$56$1_0$25	= .
+                           4288 	.globl	C$main.c$56$1_0$25
                      1079  4289 	XG$main$0$0	= .
                            4290 	.globl	XG$main$0$0
    1079 18 FB         [12] 4291 	jr	00102$

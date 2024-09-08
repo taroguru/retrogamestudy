@@ -116,18 +116,18 @@ _CODE                               00004000    000011AF =        4527. bytes (R
      00005091  A$mainuild/main$4241               main
      00005092  A$mainuild/main$4242               main
      00005093  A$mainuild/main$4246               main
-     00005093  C$main.c$34$1_0$25                 main
+     00005093  C$main.c$35$1_0$25                 main
      00005096  A$mainuild/main$4250               main
-     00005096  C$main.c$37$1_0$25                 main
+     00005096  C$main.c$38$1_0$25                 main
      00005099  A$mainuild/main$4251               main
      0000509C  A$mainuild/main$4255               main
-     0000509C  C$main.c$38$1_0$25                 main
+     0000509C  C$main.c$39$1_0$25                 main
      0000509F  A$mainuild/main$4256               main
      000050A2  A$mainuild/main$4260               main
-     000050A2  C$main.c$41$1_0$25                 main
+     000050A2  C$main.c$42$1_0$25                 main
      000050A4  A$mainuild/main$4261               main
      000050A7  A$mainuild/main$4265               main
-     000050A7  C$main.c$43$1_0$25                 main
+     000050A7  C$main.c$45$1_0$25                 main
      000050AA  A$mainuild/main$4266               main
      000050AB  A$mainuild/main$4267               main
      000050AE  A$mainuild/main$4268               main
@@ -135,12 +135,12 @@ _CODE                               00004000    000011AF =        4527. bytes (R
      000050B2  A$mainuild/main$4270               main
      000050B3  A$mainuild/main$4271               main
      000050B4  A$mainuild/main$4275               main
-     000050B4  C$main.c$45$1_0$25                 main
+     000050B4  C$main.c$48$1_0$25                 main
      000050B7  A$mainuild/main$4283               main
-     000050B7  C$main.c$49$1_0$25                 main
-     000050B7  C$main.c$51$2_0$26                 main
+     000050B7  C$main.c$51$1_0$25                 main
+     000050B7  C$main.c$53$2_0$26                 main
      000050BA  A$mainuild/main$4291               main
-     000050BA  C$main.c$54$1_0$25                 main
+     000050BA  C$main.c$56$1_0$25                 main
      000050BA  XG$main$0$0                        main
      000050BC  Fmain$__str_0$0_0$0                main
      000050CB  _ubox_fill_screen                  

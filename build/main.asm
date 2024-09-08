@@ -4240,28 +4240,28 @@ _main::
 	call	_ubox_set_colors
 	pop	af
 	inc	sp
-	C$main.c$34$1_0$25	= .
-	.globl	C$main.c$34$1_0$25
-;main.c:34: ubox_disable_screen();
+	C$main.c$35$1_0$25	= .
+	.globl	C$main.c$35$1_0$25
+;main.c:35: ubox_disable_screen();
 	call	_ubox_disable_screen
-	C$main.c$37$1_0$25	= .
-	.globl	C$main.c$37$1_0$25
-;main.c:37: ubox_set_tiles(tiles);
-	ld	hl, #_tiles
-	call	_ubox_set_tiles
 	C$main.c$38$1_0$25	= .
 	.globl	C$main.c$38$1_0$25
-;main.c:38: ubox_set_tiles_colors(tiles_colors);
+;main.c:38: ubox_set_tiles(tiles);
+	ld	hl, #_tiles
+	call	_ubox_set_tiles
+	C$main.c$39$1_0$25	= .
+	.globl	C$main.c$39$1_0$25
+;main.c:39: ubox_set_tiles_colors(tiles_colors);
 	ld	hl, #_tiles_colors
 	call	_ubox_set_tiles_colors
-	C$main.c$41$1_0$25	= .
-	.globl	C$main.c$41$1_0$25
-;main.c:41: ubox_fill_screen(WHITESPACE_TILE);
+	C$main.c$42$1_0$25	= .
+	.globl	C$main.c$42$1_0$25
+;main.c:42: ubox_fill_screen(WHITESPACE_TILE);
 	ld	l, #0x81
 	call	_ubox_fill_screen
-	C$main.c$43$1_0$25	= .
-	.globl	C$main.c$43$1_0$25
-;main.c:43: put_text(11, 11, "HELLO, WORLD!!");
+	C$main.c$45$1_0$25	= .
+	.globl	C$main.c$45$1_0$25
+;main.c:45: put_text(11, 11, "HELLO, WORLD!!");
 	ld	hl, #___str_0
 	push	hl
 	ld	de, #0x0b0b
@@ -4269,23 +4269,23 @@ _main::
 	call	_put_text
 	pop	af
 	pop	af
-	C$main.c$45$1_0$25	= .
-	.globl	C$main.c$45$1_0$25
-;main.c:45: ubox_enable_screen();
+	C$main.c$48$1_0$25	= .
+	.globl	C$main.c$48$1_0$25
+;main.c:48: ubox_enable_screen();
 	call	_ubox_enable_screen
-	C$main.c$49$1_0$25	= .
-	.globl	C$main.c$49$1_0$25
-;main.c:49: while(1)
+	C$main.c$51$1_0$25	= .
+	.globl	C$main.c$51$1_0$25
+;main.c:51: while(1)
 00102$:
-	C$main.c$51$2_0$26	= .
-	.globl	C$main.c$51$2_0$26
-;main.c:51: ubox_wait();
+	C$main.c$53$2_0$26	= .
+	.globl	C$main.c$53$2_0$26
+;main.c:53: ubox_wait();
 	call	_ubox_wait
-	C$main.c$54$1_0$25	= .
-	.globl	C$main.c$54$1_0$25
-;main.c:54: }
-	C$main.c$54$1_0$25	= .
-	.globl	C$main.c$54$1_0$25
+	C$main.c$56$1_0$25	= .
+	.globl	C$main.c$56$1_0$25
+;main.c:56: }
+	C$main.c$56$1_0$25	= .
+	.globl	C$main.c$56$1_0$25
 	XG$main$0$0	= .
 	.globl	XG$main$0$0
 	jr	00102$
