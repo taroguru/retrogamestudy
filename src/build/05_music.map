@@ -1,0 +1,260 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           
+     00000000  l__BSEG                         
+     00000000  l__BSS                          
+     00000000  l__CABS                         
+     00000000  l__DABS                         
+     00000000  l__HEAP                         
+     00000000  l__HOME                         
+     00000000  l__INITIALIZED                  
+     00000000  l__INITIALIZER                  
+     00000000  s__CABS                         
+     00000000  s__DABS                         
+     00000001  l__GSFINAL                      
+     00000005  l__DATA                         
+     0000000F  l__GSINIT                       
+     00001ECB  l__CODE                         
+     00004000  s__CODE                         
+     00005ECB  s__GSINIT                       
+     00005ECB  s__HOME                         
+     00005ECB  s__INITIALIZER                  
+     00005EDA  s__GSFINAL                      
+     0000C0DE  s__DATA                         
+     0000C0E3  s__BSEG                         
+     0000C0E3  s__BSS                          
+     0000C0E3  s__HEAP                         
+     0000C0E3  s__INITIALIZED                  
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00004000    00001ECB =        7883. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00004010  _main_init                         crt0
+     00004041  A$mainuild/main$71                 main
+     00004041  C$main.c$12$0_0$29                 main
+     00004041  C$main.c$14$1_0$29                 main
+     00004041  G$put_text$0$0                     main
+     00004041  _put_text                          main
+     00004045  A$mainuild/main$72                 main
+     00004047  A$mainuild/main$73                 main
+     0000404A  A$mainuild/main$74                 main
+     0000404D  A$mainuild/main$75                 main
+     0000404F  A$mainuild/main$76                 main
+     00004051  A$mainuild/main$77                 main
+     00004054  A$mainuild/main$79                 main
+     00004055  A$mainuild/main$80                 main
+     00004056  A$mainuild/main$81                 main
+     00004057  A$mainuild/main$85                 main
+     00004057  C$main.c$15$1_0$29                 main
+     00004058  A$mainuild/main$86                 main
+     0000405A  A$mainuild/main$87                 main
+     0000405B  A$mainuild/main$88                 main
+     0000405C  A$mainuild/main$89                 main
+     0000405D  A$mainuild/main$90                 main
+     00004061  A$mainuild/main$91                 main
+     00004063  A$mainuild/main$92                 main
+     00004066  A$mainuild/main$93                 main
+     00004067  A$mainuild/main$94                 main
+     00004068  A$mainuild/main$95                 main
+     00004069  A$mainuild/main$96                 main
+     0000406A  A$mainuild/main$97                 main
+     0000406C  A$mainuild/main$98                 main
+     0000406F  A$mainuild/main$99                 main
+     00004070  A$mainuild/main$100                main
+     00004071  A$mainuild/main$101                main
+     00004072  A$mainuild/main$102                main
+     00004073  A$mainuild/main$103                main
+     00004076  A$mainuild/main$104                main
+     00004077  A$mainuild/main$105                main
+     00004078  A$mainuild/main$106                main
+     00004079  A$mainuild/main$107                main
+     0000407A  A$mainuild/main$115                main
+     0000407A  C$main.c$16$1_0$29                 main
+     0000407A  XG$put_text$0$0                    main
+     0000407C  G$tiles$0_0$0                      main
+     0000407C  _tiles                             main
+     0000487C  G$tiles_colors$0_0$0               main
+     0000487C  _tiles_colors                      main
+     0000507C  A$mainuild/main$4228               main
+     0000507C  C$main.c$18$1_0$30                 main
+     0000507C  C$main.c$21$1_0$30                 main
+     0000507C  G$main$0$0                         main
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00004000    00001ECB =        7883. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000507C  _main                              main
+     0000507E  A$mainuild/main$4229               main
+     00005081  A$mainuild/main$4233               main
+     00005081  C$main.c$23$1_0$30                 main
+     00005083  A$mainuild/main$4234               main
+     00005086  A$mainuild/main$4238               main
+     00005086  C$main.c$25$1_0$30                 main
+     00005089  A$mainuild/main$4239               main
+     0000508A  A$mainuild/main$4240               main
+     0000508C  A$mainuild/main$4241               main
+     0000508D  A$mainuild/main$4242               main
+     0000508E  A$mainuild/main$4243               main
+     00005091  A$mainuild/main$4244               main
+     00005092  A$mainuild/main$4245               main
+     00005093  A$mainuild/main$4249               main
+     00005093  C$main.c$27$1_0$30                 main
+     00005096  A$mainuild/main$4253               main
+     00005096  C$main.c$29$1_0$30                 main
+     00005099  A$mainuild/main$4254               main
+     0000509C  A$mainuild/main$4258               main
+     0000509C  C$main.c$30$1_0$30                 main
+     0000509F  A$mainuild/main$4259               main
+     000050A2  A$mainuild/main$4263               main
+     000050A2  C$main.c$32$1_0$30                 main
+     000050A4  A$mainuild/main$4264               main
+     000050A7  A$mainuild/main$4268               main
+     000050A7  C$main.c$33$1_0$30                 main
+     000050AA  A$mainuild/main$4269               main
+     000050AB  A$mainuild/main$4270               main
+     000050AE  A$mainuild/main$4271               main
+     000050AF  A$mainuild/main$4272               main
+     000050B2  A$mainuild/main$4273               main
+     000050B3  A$mainuild/main$4274               main
+     000050B4  A$mainuild/main$4278               main
+     000050B4  C$main.c$35$1_0$30                 main
+     000050B7  A$mainuild/main$4282               main
+     000050B7  C$main.c$37$1_0$30                 main
+     000050B8  A$mainuild/main$4283               main
+     000050B9  A$mainuild/main$4284               main
+     000050BA  A$mainuild/main$4285               main
+     000050BD  A$mainuild/main$4286               main
+     000050BE  A$mainuild/main$4287               main
+     000050C1  A$mainuild/main$4288               main
+     000050C2  A$mainuild/main$4289               main
+     000050C3  A$mainuild/main$4293               main
+     000050C3  C$main.c$39$1_0$30                 main
+     000050C6  A$mainuild/main$4294               main
+     000050C9  A$mainuild/main$4298               main
+     000050C9  C$main.c$41$1_0$30                 main
+     000050CC  A$mainuild/main$4306               main
+     000050CC  C$main.c$43$1_0$30                 main
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00004000    00001ECB =        7883. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000050CC  C$main.c$45$2_0$31                 main
+     000050CF  A$mainuild/main$4314               main
+     000050CF  C$main.c$47$1_0$30                 main
+     000050CF  XG$main$0$0                        main
+     000050D1  Fmain$__str_0$0_0$0                main
+     000050EB  _PLY_AKM_INITSOUNDEFFECTS          
+     000050EF  _PLY_AKM_PLAYSOUNDEFFECT           
+     00005117  _PLY_AKM_STOPSOUNDEFFECTFROMCHAN   
+     0000520C  _PLY_AKM_INIT                      
+     000052EE  _PLY_AKM_STOP                      
+     00005304  _PLY_AKM_PLAY                      
+     000056E8  _PLY_AKM_ISSOUNDEFFECTON           
+     000056F8  _ALIENALL_START                    
+     000056F8  _SONG                              
+     00005DC9  _ubox_fill_screen                  
+     00005DD3  _ubox_enable_screen                
+     00005DD6  _ubox_set_tiles                    
+     00005DF5  _ubox_set_mode                     
+     00005DF9  _ubox_set_user_isr                 
+     00005DFF  _ubox_init_isr                     
+     00005E4B  _ubox_put_tile                     
+     00005E66  ___sdcc_call_hl                    
+     00005E67  _mplayer_init                      
+     00005E7C  _mplayer_play                      mplayer
+     00005E7F  _ubox_disable_screen               
+     00005E82  _ubox_wait                         
+     00005E95  _ubox_set_tiles_colors             
+     00005EB4  _ubox_set_colors                   
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_GSINIT                             00005ECB    0000000F =          15. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00005ECB  gsinit                             crt0
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_GSFINAL                            00005EDA    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_DATA                               0000C0DE    00000005 =           5. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000C0DE  ubox_isr_wait_ticks                
+     0000C0DF  ubox_isr_wait_tick                 
+     0000C0E0  _ubox_tick                         
+     0000C0E1  ubox_usr_isr                       
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+
+Files Linked                              [ module(s) ]
+
+../build/crt0.rel                         [ crt0 ]
+../build/main.rel                         [ main ]
+../build/akm.rel                          [  ]
+
+
+Libraries Linked                          [ object file ]
+
+../../../lib/ubox.lib                     [ ubox_fill_screen.rel ]
+../../../lib/ubox.lib                     [ ubox_enable_screen.rel ]
+../../../lib/ubox.lib                     [ ubox_set_tiles.rel ]
+../../../lib/ubox.lib                     [ ubox_set_mode.rel ]
+../../../lib/ubox.lib                     [ ubox_set_user_isr.rel ]
+../../../lib/ubox.lib                     [ ubox_isr.rel ]
+../../../lib/ubox.lib                     [ ubox_put_tile.rel ]
+/usr/local/bin/../share/sdcc/lib/z80/z80.lib
+                                          [ __sdcc_call_hl.rel ]
+../../../lib/mplayer.lib                  [ mplayer_init.rel ]
+../../../lib/mplayer.lib                  [ mplayer_play.rel ]
+../../../lib/ubox.lib                     [ ubox_disable_screen.rel ]
+../../../lib/ubox.lib                     [ ubox_wait.rel ]
+../../../lib/ubox.lib                     [ ubox_set_tiles_colors.rel ]
+../../../lib/ubox.lib                     [ ubox_set_colors.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+
+User Base Address Definitions
+
+_CODE = 0x4000
+_DATA = 0xc0de
+
+

@@ -9,8 +9,17 @@
 ; Public variables in this module
 ;--------------------------------------------------------
 	.globl _main
+	.globl _inc_count
 	.globl _put_text
+	.globl _mplayer_play_effect_p
+	.globl _mplayer_play
+	.globl _mplayer_init_effects
+	.globl _mplayer_init
+	.globl _sprintf_
+	.globl _printf_
+	.globl _ubox_read_keys
 	.globl _ubox_wait
+	.globl _ubox_set_user_isr
 	.globl _ubox_init_isr
 	.globl _ubox_fill_screen
 	.globl _ubox_put_tile
@@ -20,8 +29,13 @@
 	.globl _ubox_disable_screen
 	.globl _ubox_enable_screen
 	.globl _ubox_set_mode
+	.globl _g_y
+	.globl _g_x
+	.globl _gcount
+	.globl _gcounter
 	.globl _tiles_colors
 	.globl _tiles
+	.globl __putchar
 ;--------------------------------------------------------
 ; special function registers
 ;--------------------------------------------------------
@@ -33,6 +47,18 @@
 ; ram data
 ;--------------------------------------------------------
 	.area _INITIALIZED
+G$gcounter$0_0$0==.
+_gcounter::
+	.ds 2
+G$gcount$0_0$0==.
+_gcount::
+	.ds 2
+G$g_x$0_0$0==.
+_g_x::
+	.ds 2
+G$g_y$0_0$0==.
+_g_y::
+	.ds 2
 ;--------------------------------------------------------
 ; absolute external ram data
 ;--------------------------------------------------------
@@ -55,16 +81,16 @@
 	.area _CODE
 	G$put_text$0$0	= .
 	.globl	G$put_text$0$0
-	C$main.c$11$0_0$23	= .
-	.globl	C$main.c$11$0_0$23
-;main.c:11: void put_text(uint8_t x, uint8_t y, const uint8_t *text){
+	C$main.c$33$0_0$48	= .
+	.globl	C$main.c$33$0_0$48
+;main.c:33: void put_text(uint8_t x, uint8_t y, const uint8_t *text){
 ;	---------------------------------
 ; Function put_text
 ; ---------------------------------
 _put_text::
-	C$main.c$12$1_0$23	= .
-	.globl	C$main.c$12$1_0$23
-;main.c:12: while(*text){       
+	C$main.c$34$1_0$48	= .
+	.globl	C$main.c$34$1_0$48
+;main.c:34: while(*text){       
 	ld	iy, #4
 	add	iy, sp
 	ld	c, 0 (iy)
@@ -76,9 +102,9 @@ _put_text::
 	ld	a, (bc)
 	or	a, a
 	ret	Z
-	C$main.c$13$2_0$24	= .
-	.globl	C$main.c$13$2_0$24
-;main.c:13: ubox_put_tile(x++, y, *text++ + 128 - 31);
+	C$main.c$35$2_0$49	= .
+	.globl	C$main.c$35$2_0$49
+;main.c:35: ubox_put_tile(x++, y, *text++ - ASCII_A + A_TILE );
 	inc	bc
 	add	a, #0x61
 	ld	h, a
@@ -102,11 +128,11 @@ _put_text::
 	inc	sp
 	pop	de
 	pop	bc
-	C$main.c$15$1_0$23	= .
-	.globl	C$main.c$15$1_0$23
-;main.c:15: }
-	C$main.c$15$1_0$23	= .
-	.globl	C$main.c$15$1_0$23
+	C$main.c$37$1_0$48	= .
+	.globl	C$main.c$37$1_0$48
+;main.c:37: }
+	C$main.c$37$1_0$48	= .
+	.globl	C$main.c$37$1_0$48
 	XG$put_text$0$0	= .
 	.globl	XG$put_text$0$0
 	jr	00101$
@@ -4210,28 +4236,113 @@ _tiles_colors:
 	.db #0x11	; 17
 	.db #0x11	; 17
 	.db #0x11	; 17
+	G$inc_count$0$0	= .
+	.globl	G$inc_count$0$0
+	C$main.c$42$1_0$50	= .
+	.globl	C$main.c$42$1_0$50
+;main.c:42: void inc_count(){
+;	---------------------------------
+; Function inc_count
+; ---------------------------------
+_inc_count::
+	C$main.c$43$1_0$50	= .
+	.globl	C$main.c$43$1_0$50
+;main.c:43: ++gcounter;
+	ld	hl, (_gcounter)
+	inc	hl
+	ld	(_gcounter), hl
+	C$main.c$44$1_0$50	= .
+	.globl	C$main.c$44$1_0$50
+;main.c:44: }
+	C$main.c$44$1_0$50	= .
+	.globl	C$main.c$44$1_0$50
+	XG$inc_count$0$0	= .
+	.globl	XG$inc_count$0$0
+	ret
+	G$_putchar$0$0	= .
+	.globl	G$_putchar$0$0
+	C$main.c$49$1_0$52	= .
+	.globl	C$main.c$49$1_0$52
+;main.c:49: void _putchar(char character)
+;	---------------------------------
+; Function _putchar
+; ---------------------------------
+__putchar::
+	C$main.c$52$1_0$52	= .
+	.globl	C$main.c$52$1_0$52
+;main.c:52: if(character == '\n')   {
+	ld	hl, #2+0
+	add	hl, sp
+	ld	a, (hl)
+	sub	a, #0x0a
+	jr	NZ,00102$
+	C$main.c$53$2_0$53	= .
+	.globl	C$main.c$53$2_0$53
+;main.c:53: g_x = 0;
+	ld	hl, #0x0000
+	ld	(_g_x), hl
+	C$main.c$54$2_0$53	= .
+	.globl	C$main.c$54$2_0$53
+;main.c:54: ++g_y;  // 개행문자 적용
+	ld	hl, (_g_y)
+	inc	hl
+	ld	(_g_y), hl
+	ret
+00102$:
+	C$main.c$57$2_0$54	= .
+	.globl	C$main.c$57$2_0$54
+;main.c:57: ubox_put_tile(g_x++, g_y, character + 128 - 31);
+	ld	hl, #2+0
+	add	hl, sp
+	ld	a, (hl)
+	add	a, #0x61
+	ld	d, a
+	ld	hl,#_g_y + 0
+	ld	e, (hl)
+	ld	bc, (_g_x)
+	ld	hl, (_g_x)
+	inc	hl
+	ld	(_g_x), hl
+	push	de
+	inc	sp
+	ld	b, e
+	push	bc
+	call	_ubox_put_tile
+	pop	af
+	inc	sp
+	C$main.c$59$1_0$52	= .
+	.globl	C$main.c$59$1_0$52
+;main.c:59: }
+	C$main.c$59$1_0$52	= .
+	.globl	C$main.c$59$1_0$52
+	XG$_putchar$0$0	= .
+	.globl	XG$_putchar$0$0
+	ret
 	G$main$0$0	= .
 	.globl	G$main$0$0
-	C$main.c$21$1_0$25	= .
-	.globl	C$main.c$21$1_0$25
-;main.c:21: void main()
+	C$main.c$64$1_0$55	= .
+	.globl	C$main.c$64$1_0$55
+;main.c:64: void main()
 ;	---------------------------------
 ; Function main
 ; ---------------------------------
 _main::
-	C$main.c$25$1_0$25	= .
-	.globl	C$main.c$25$1_0$25
-;main.c:25: ubox_init_isr(2);   
-	ld	l, #0x02
+	ld	hl, #-10
+	add	hl, sp
+	ld	sp, hl
+	C$main.c$71$1_0$55	= .
+	.globl	C$main.c$71$1_0$55
+;main.c:71: ubox_init_isr(1);   
+	ld	l, #0x01
 	call	_ubox_init_isr
-	C$main.c$27$1_0$25	= .
-	.globl	C$main.c$27$1_0$25
-;main.c:27: ubox_set_mode(2);
+	C$main.c$79$1_0$55	= .
+	.globl	C$main.c$79$1_0$55
+;main.c:79: ubox_set_mode(2);
 	ld	l, #0x02
 	call	_ubox_set_mode
-	C$main.c$30$1_0$25	= .
-	.globl	C$main.c$30$1_0$25
-;main.c:30: ubox_set_colors(1,1,1);
+	C$main.c$82$1_0$55	= .
+	.globl	C$main.c$82$1_0$55
+;main.c:82: ubox_set_colors(1,1,1);
 	ld	de, #0x0101
 	push	de
 	ld	a, #0x01
@@ -4240,28 +4351,28 @@ _main::
 	call	_ubox_set_colors
 	pop	af
 	inc	sp
-	C$main.c$35$1_0$25	= .
-	.globl	C$main.c$35$1_0$25
-;main.c:35: ubox_disable_screen();
+	C$main.c$87$1_0$55	= .
+	.globl	C$main.c$87$1_0$55
+;main.c:87: ubox_disable_screen();  
 	call	_ubox_disable_screen
-	C$main.c$38$1_0$25	= .
-	.globl	C$main.c$38$1_0$25
-;main.c:38: ubox_set_tiles(tiles);
+	C$main.c$90$1_0$55	= .
+	.globl	C$main.c$90$1_0$55
+;main.c:90: ubox_set_tiles(tiles);
 	ld	hl, #_tiles
 	call	_ubox_set_tiles
-	C$main.c$39$1_0$25	= .
-	.globl	C$main.c$39$1_0$25
-;main.c:39: ubox_set_tiles_colors(tiles_colors);
+	C$main.c$91$1_0$55	= .
+	.globl	C$main.c$91$1_0$55
+;main.c:91: ubox_set_tiles_colors(tiles_colors);
 	ld	hl, #_tiles_colors
 	call	_ubox_set_tiles_colors
-	C$main.c$42$1_0$25	= .
-	.globl	C$main.c$42$1_0$25
-;main.c:42: ubox_fill_screen(WHITESPACE_TILE);
+	C$main.c$94$1_0$55	= .
+	.globl	C$main.c$94$1_0$55
+;main.c:94: ubox_fill_screen(WHITESPACE_TILE);
 	ld	l, #0x81
 	call	_ubox_fill_screen
-	C$main.c$45$1_0$25	= .
-	.globl	C$main.c$45$1_0$25
-;main.c:45: put_text(11, 11, "HELLO, WORLD!!");
+	C$main.c$97$1_0$55	= .
+	.globl	C$main.c$97$1_0$55
+;main.c:97: put_text(11, 11, "HELLO, WORLD!!");
 	ld	hl, #___str_0
 	push	hl
 	ld	de, #0x0b0b
@@ -4269,30 +4380,270 @@ _main::
 	call	_put_text
 	pop	af
 	pop	af
-	C$main.c$48$1_0$25	= .
-	.globl	C$main.c$48$1_0$25
-;main.c:48: ubox_enable_screen();
+	C$main.c$100$1_0$55	= .
+	.globl	C$main.c$100$1_0$55
+;main.c:100: ubox_enable_screen();
 	call	_ubox_enable_screen
-	C$main.c$51$1_0$25	= .
-	.globl	C$main.c$51$1_0$25
-;main.c:51: while(1)
+	C$main.c$101$1_0$55	= .
+	.globl	C$main.c$101$1_0$55
+;main.c:101: ubox_set_user_isr(inc_count);
+	ld	hl, #_inc_count
+	call	_ubox_set_user_isr
+	C$main.c$104$1_0$55	= .
+	.globl	C$main.c$104$1_0$55
+;main.c:104: mplayer_init(SONG, 0);
+	xor	a, a
+	push	af
+	inc	sp
+	ld	hl, #_SONG
+	push	hl
+	call	_mplayer_init
+	pop	af
+	inc	sp
+	C$main.c$105$1_0$55	= .
+	.globl	C$main.c$105$1_0$55
+;main.c:105: mplayer_init_effects(EFFECTS);
+	ld	hl, #_EFFECTS
+	call	_mplayer_init_effects
+	C$main.c$106$1_0$55	= .
+	.globl	C$main.c$106$1_0$55
+;main.c:106: ubox_set_user_isr(mplayer_play);
+	ld	hl, #_mplayer_play
+	call	_ubox_set_user_isr
+	C$main.c$107$1_0$55	= .
+	.globl	C$main.c$107$1_0$55
+;main.c:107: mplayer_play();
+	call	_mplayer_play
+	C$main.c$109$1_0$55	= .
+	.globl	C$main.c$109$1_0$55
+;main.c:109: printf("VAMPIRE SURVIORS 3\n");
+	ld	hl, #___str_1
+	push	hl
+	call	_printf_
+	C$main.c$110$1_0$55	= .
+	.globl	C$main.c$110$1_0$55
+;main.c:110: printf("HELLO\n");
+	ld	hl, #___str_2
+	ex	(sp),hl
+	call	_printf_
+	C$main.c$111$1_0$55	= .
+	.globl	C$main.c$111$1_0$55
+;main.c:111: printf("HELLO");
+	ld	hl, #___str_3
+	ex	(sp),hl
+	call	_printf_
+	pop	af
+	C$main.c$114$1_0$55	= .
+	.globl	C$main.c$114$1_0$55
+;main.c:114: while(1)
+00114$:
+	C$main.c$118$2_0$56	= .
+	.globl	C$main.c$118$2_0$56
+;main.c:118: if(gcounter >= 150){
+	ld	iy, #_gcounter
+	ld	a, 0 (iy)
+	sub	a, #0x96
+	ld	a, 1 (iy)
+	rla
+	ccf
+	rra
+	sbc	a, #0x80
+	jr	C,00102$
+	C$main.c$119$3_0$57	= .
+	.globl	C$main.c$119$3_0$57
+;main.c:119: gcount++;
+	ld	hl, (_gcount)
+	inc	hl
+	ld	(_gcount), hl
+	C$main.c$120$3_0$57	= .
+	.globl	C$main.c$120$3_0$57
+;main.c:120: sprintf(buffer, "%d",gcount);
+	ld	hl, #0
+	add	hl, sp
+	ex	de, hl
+	ld	c, e
+	ld	b, d
+	push	de
+	ld	hl, (_gcount)
+	push	hl
+	ld	hl, #___str_4
+	push	hl
+	push	bc
+	call	_sprintf_
+	ld	hl, #6
+	add	hl, sp
+	ld	sp, hl
+	ld	de, #0x0303
+	push	de
+	call	_put_text
+	pop	af
+	pop	af
+	C$main.c$122$3_0$57	= .
+	.globl	C$main.c$122$3_0$57
+;main.c:122: gcounter = 0;
+	ld	hl, #0x0000
+	ld	(_gcounter), hl
 00102$:
-	C$main.c$53$2_0$26	= .
-	.globl	C$main.c$53$2_0$26
-;main.c:53: ubox_wait();
+	C$main.c$126$2_0$56	= .
+	.globl	C$main.c$126$2_0$56
+;main.c:126: if( ubox_read_keys(0) == UBOX_MSX_KEY_1)
+	ld	l, #0x00
+	call	_ubox_read_keys
+	ld	a, l
+	sub	a, #0x02
+	jr	NZ,00104$
+	C$main.c$127$2_0$56	= .
+	.globl	C$main.c$127$2_0$56
+;main.c:127: mplayer_play_effect_p(EFX_START, EFX_CHAN_NO, 0);
+	xor	a, a
+	ld	d,a
+	ld	e,#0x02
+	push	de
+	ld	a, #0x01
+	push	af
+	inc	sp
+	call	_mplayer_play_effect_p
+	pop	af
+	inc	sp
+00104$:
+	C$main.c$129$2_0$56	= .
+	.globl	C$main.c$129$2_0$56
+;main.c:129: if (ubox_read_keys(0) == UBOX_MSX_KEY_2)
+	ld	l, #0x00
+	call	_ubox_read_keys
+	ld	a, l
+	sub	a, #0x04
+	jr	NZ,00106$
+	C$main.c$130$2_0$56	= .
+	.globl	C$main.c$130$2_0$56
+;main.c:130: mplayer_play_effect_p(EFX_BATTERY, EFX_CHAN_NO, 0);
+	xor	a, a
+	ld	d,a
+	ld	e,#0x02
+	push	de
+	ld	a, #0x02
+	push	af
+	inc	sp
+	call	_mplayer_play_effect_p
+	pop	af
+	inc	sp
+00106$:
+	C$main.c$132$2_0$56	= .
+	.globl	C$main.c$132$2_0$56
+;main.c:132: if (ubox_read_keys(0) == UBOX_MSX_KEY_3)
+	ld	l, #0x00
+	call	_ubox_read_keys
+	ld	a, l
+	sub	a, #0x08
+	jr	NZ,00108$
+	C$main.c$133$2_0$56	= .
+	.globl	C$main.c$133$2_0$56
+;main.c:133: mplayer_play_effect_p(EFX_ELEVATOR, EFX_CHAN_NO, 0);
+	xor	a, a
+	ld	d,a
+	ld	e,#0x02
+	push	de
+	ld	a, #0x03
+	push	af
+	inc	sp
+	call	_mplayer_play_effect_p
+	pop	af
+	inc	sp
+00108$:
+	C$main.c$135$2_0$56	= .
+	.globl	C$main.c$135$2_0$56
+;main.c:135: if (ubox_read_keys(0) == UBOX_MSX_KEY_4)
+	ld	l, #0x00
+	call	_ubox_read_keys
+	ld	a, l
+	sub	a, #0x10
+	jr	NZ,00110$
+	C$main.c$136$2_0$56	= .
+	.globl	C$main.c$136$2_0$56
+;main.c:136: mplayer_play_effect_p(EFX_HIT, EFX_CHAN_NO, 0);
+	xor	a, a
+	ld	d,a
+	ld	e,#0x02
+	push	de
+	ld	a, #0x04
+	push	af
+	inc	sp
+	call	_mplayer_play_effect_p
+	pop	af
+	inc	sp
+00110$:
+	C$main.c$138$2_0$56	= .
+	.globl	C$main.c$138$2_0$56
+;main.c:138: if (ubox_read_keys(0) == UBOX_MSX_KEY_5)
+	ld	l, #0x00
+	call	_ubox_read_keys
+	ld	a, l
+	sub	a, #0x20
+	jr	NZ,00112$
+	C$main.c$139$2_0$56	= .
+	.globl	C$main.c$139$2_0$56
+;main.c:139: mplayer_play_effect_p(EFX_DEAD, EFX_CHAN_NO, 0);
+	xor	a, a
+	ld	d,a
+	ld	e,#0x02
+	push	de
+	ld	a, #0x05
+	push	af
+	inc	sp
+	call	_mplayer_play_effect_p
+	pop	af
+	inc	sp
+00112$:
+	C$main.c$140$2_0$56	= .
+	.globl	C$main.c$140$2_0$56
+;main.c:140: ubox_wait();
 	call	_ubox_wait
-	C$main.c$56$1_0$25	= .
-	.globl	C$main.c$56$1_0$25
-;main.c:56: }
-	C$main.c$56$1_0$25	= .
-	.globl	C$main.c$56$1_0$25
+	jp	00114$
+	C$main.c$143$1_0$55	= .
+	.globl	C$main.c$143$1_0$55
+;main.c:143: }
+	ld	hl, #10
+	add	hl, sp
+	ld	sp, hl
+	C$main.c$143$1_0$55	= .
+	.globl	C$main.c$143$1_0$55
 	XG$main$0$0	= .
 	.globl	XG$main$0$0
-	jr	00102$
+	ret
 Fmain$__str_0$0_0$0 == .
 ___str_0:
 	.ascii "HELLO, WORLD!!"
 	.db 0x00
+Fmain$__str_1$0_0$0 == .
+___str_1:
+	.ascii "VAMPIRE SURVIORS 3"
+	.db 0x0a
+	.db 0x00
+Fmain$__str_2$0_0$0 == .
+___str_2:
+	.ascii "HELLO"
+	.db 0x0a
+	.db 0x00
+Fmain$__str_3$0_0$0 == .
+___str_3:
+	.ascii "HELLO"
+	.db 0x00
+Fmain$__str_4$0_0$0 == .
+___str_4:
+	.ascii "%d"
+	.db 0x00
 	.area _CODE
 	.area _INITIALIZER
+Fmain$__xinit_gcounter$0_0$0 == .
+__xinit__gcounter:
+	.dw #0x0000
+Fmain$__xinit_gcount$0_0$0 == .
+__xinit__gcount:
+	.dw #0x0000
+Fmain$__xinit_g_x$0_0$0 == .
+__xinit__g_x:
+	.dw #0x0000
+Fmain$__xinit_g_y$0_0$0 == .
+__xinit__g_y:
+	.dw #0x0000
 	.area _CABS (ABS)

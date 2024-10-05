@@ -7,101 +7,370 @@ Symbol Table
     .__.ABS.                                                    =  0000 G
     .__.CPU.                                                    =  0000 L
     .__.H$L.                                                    =  0000 L
-  0 A$mainuild/main$100                                            0032 GR
-  0 A$mainuild/main$101                                            0035 GR
-  0 A$mainuild/main$102                                            0036 GR
-  0 A$mainuild/main$103                                            0037 GR
-  0 A$mainuild/main$104                                            0038 GR
-  0 A$mainuild/main$112                                            0039 GR
-  0 A$mainuild/main$4225                                           103B GR
-  0 A$mainuild/main$4226                                           103D GR
-  0 A$mainuild/main$4230                                           1040 GR
-  0 A$mainuild/main$4231                                           1042 GR
-  0 A$mainuild/main$4235                                           1045 GR
-  0 A$mainuild/main$4236                                           1048 GR
-  0 A$mainuild/main$4237                                           1049 GR
-  0 A$mainuild/main$4238                                           104B GR
-  0 A$mainuild/main$4239                                           104C GR
-  0 A$mainuild/main$4240                                           104D GR
-  0 A$mainuild/main$4241                                           1050 GR
-  0 A$mainuild/main$4242                                           1051 GR
-  0 A$mainuild/main$4246                                           1052 GR
-  0 A$mainuild/main$4250                                           1055 GR
-  0 A$mainuild/main$4251                                           1058 GR
-  0 A$mainuild/main$4255                                           105B GR
-  0 A$mainuild/main$4256                                           105E GR
-  0 A$mainuild/main$4260                                           1061 GR
-  0 A$mainuild/main$4261                                           1063 GR
-  0 A$mainuild/main$4265                                           1066 GR
-  0 A$mainuild/main$4266                                           1069 GR
-  0 A$mainuild/main$4267                                           106A GR
-  0 A$mainuild/main$4268                                           106D GR
-  0 A$mainuild/main$4269                                           106E GR
-  0 A$mainuild/main$4270                                           1071 GR
-  0 A$mainuild/main$4271                                           1072 GR
-  0 A$mainuild/main$4275                                           1073 GR
-  0 A$mainuild/main$4283                                           1076 GR
-  0 A$mainuild/main$4291                                           1079 GR
-  0 A$mainuild/main$68                                             0000 GR
-  0 A$mainuild/main$69                                             0004 GR
-  0 A$mainuild/main$70                                             0006 GR
-  0 A$mainuild/main$71                                             0009 GR
-  0 A$mainuild/main$72                                             000C GR
-  0 A$mainuild/main$73                                             000E GR
-  0 A$mainuild/main$74                                             0010 GR
-  0 A$mainuild/main$76                                             0013 GR
-  0 A$mainuild/main$77                                             0014 GR
-  0 A$mainuild/main$78                                             0015 GR
-  0 A$mainuild/main$82                                             0016 GR
-  0 A$mainuild/main$83                                             0017 GR
-  0 A$mainuild/main$84                                             0019 GR
-  0 A$mainuild/main$85                                             001A GR
-  0 A$mainuild/main$86                                             001B GR
-  0 A$mainuild/main$87                                             001C GR
+  0 A$mainuild/main$100                                            0010 GR
+  0 A$mainuild/main$102                                            0013 GR
+  0 A$mainuild/main$103                                            0014 GR
+  0 A$mainuild/main$104                                            0015 GR
+  0 A$mainuild/main$108                                            0016 GR
+  0 A$mainuild/main$109                                            0017 GR
+  0 A$mainuild/main$110                                            0019 GR
+  0 A$mainuild/main$111                                            001A GR
+  0 A$mainuild/main$112                                            001B GR
+  0 A$mainuild/main$113                                            001C GR
+  0 A$mainuild/main$114                                            0020 GR
+  0 A$mainuild/main$115                                            0022 GR
+  0 A$mainuild/main$116                                            0025 GR
+  0 A$mainuild/main$117                                            0026 GR
+  0 A$mainuild/main$118                                            0027 GR
+  0 A$mainuild/main$119                                            0028 GR
+  0 A$mainuild/main$120                                            0029 GR
+  0 A$mainuild/main$121                                            002B GR
+  0 A$mainuild/main$122                                            002E GR
+  0 A$mainuild/main$123                                            002F GR
+  0 A$mainuild/main$124                                            0030 GR
+  0 A$mainuild/main$125                                            0031 GR
+  0 A$mainuild/main$126                                            0032 GR
+  0 A$mainuild/main$127                                            0035 GR
+  0 A$mainuild/main$128                                            0036 GR
+  0 A$mainuild/main$129                                            0037 GR
+  0 A$mainuild/main$130                                            0038 GR
+  0 A$mainuild/main$138                                            0039 GR
+  0 A$mainuild/main$4251                                           103B GR
+  0 A$mainuild/main$4252                                           103E GR
+  0 A$mainuild/main$4253                                           103F GR
+  0 A$mainuild/main$4261                                           1042 GR
+  0 A$mainuild/main$4274                                           1043 GR
+  0 A$mainuild/main$4275                                           1046 GR
+  0 A$mainuild/main$4276                                           1047 GR
+  0 A$mainuild/main$4277                                           1048 GR
+  0 A$mainuild/main$4278                                           104A GR
+  0 A$mainuild/main$4282                                           104C GR
+  0 A$mainuild/main$4283                                           104F GR
+  0 A$mainuild/main$4287                                           1052 GR
+  0 A$mainuild/main$4288                                           1055 GR
+  0 A$mainuild/main$4289                                           1056 GR
+  0 A$mainuild/main$4290                                           1059 GR
+  0 A$mainuild/main$4295                                           105A GR
+  0 A$mainuild/main$4296                                           105D GR
+  0 A$mainuild/main$4297                                           105E GR
+  0 A$mainuild/main$4298                                           105F GR
+  0 A$mainuild/main$4299                                           1061 GR
+  0 A$mainuild/main$4300                                           1062 GR
+  0 A$mainuild/main$4301                                           1065 GR
+  0 A$mainuild/main$4302                                           1066 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 2.
 Hexadecimal [16-Bits]
 
 Symbol Table
 
-  0 A$mainuild/main$88                                             0020 GR
-  0 A$mainuild/main$89                                             0022 GR
-  0 A$mainuild/main$90                                             0025 GR
-  0 A$mainuild/main$91                                             0026 GR
-  0 A$mainuild/main$92                                             0027 GR
-  0 A$mainuild/main$93                                             0028 GR
-  0 A$mainuild/main$94                                             0029 GR
-  0 A$mainuild/main$95                                             002B GR
-  0 A$mainuild/main$96                                             002E GR
-  0 A$mainuild/main$97                                             002F GR
-  0 A$mainuild/main$98                                             0030 GR
-  0 A$mainuild/main$99                                             0031 GR
-  0 C$main.c$11$0_0$23                                          =  0000 GR
-  0 C$main.c$12$1_0$23                                          =  0000 GR
-  0 C$main.c$13$2_0$24                                          =  0016 GR
-  0 C$main.c$15$1_0$23                                          =  0039 GR
-  0 C$main.c$21$1_0$25                                          =  103B GR
-  0 C$main.c$25$1_0$25                                          =  103B GR
-  0 C$main.c$27$1_0$25                                          =  1040 GR
-  0 C$main.c$30$1_0$25                                          =  1045 GR
-  0 C$main.c$35$1_0$25                                          =  1052 GR
-  0 C$main.c$38$1_0$25                                          =  1055 GR
-  0 C$main.c$39$1_0$25                                          =  105B GR
-  0 C$main.c$42$1_0$25                                          =  1061 GR
-  0 C$main.c$45$1_0$25                                          =  1066 GR
-  0 C$main.c$48$1_0$25                                          =  1073 GR
-  0 C$main.c$51$1_0$25                                          =  1076 GR
-  0 C$main.c$53$2_0$26                                          =  1076 GR
-  0 C$main.c$56$1_0$25                                          =  1079 GR
-  0 Fmain$__str_0$0_0$0                                         =  107B GR
-  0 G$main$0$0                                                  =  103B GR
+  0 A$mainuild/main$4303                                           106A GR
+  0 A$mainuild/main$4304                                           106D GR
+  0 A$mainuild/main$4305                                           106E GR
+  0 A$mainuild/main$4306                                           1071 GR
+  0 A$mainuild/main$4307                                           1072 GR
+  0 A$mainuild/main$4308                                           1073 GR
+  0 A$mainuild/main$4309                                           1074 GR
+  0 A$mainuild/main$4310                                           1075 GR
+  0 A$mainuild/main$4311                                           1078 GR
+  0 A$mainuild/main$4312                                           1079 GR
+  0 A$mainuild/main$4320                                           107A GR
+  0 A$mainuild/main$4330                                           107B GR
+  0 A$mainuild/main$4331                                           107E GR
+  0 A$mainuild/main$4332                                           107F GR
+  0 A$mainuild/main$4336                                           1080 GR
+  0 A$mainuild/main$4337                                           1082 GR
+  0 A$mainuild/main$4341                                           1085 GR
+  0 A$mainuild/main$4342                                           1087 GR
+  0 A$mainuild/main$4346                                           108A GR
+  0 A$mainuild/main$4347                                           108D GR
+  0 A$mainuild/main$4348                                           108E GR
+  0 A$mainuild/main$4349                                           1090 GR
+  0 A$mainuild/main$4350                                           1091 GR
+  0 A$mainuild/main$4351                                           1092 GR
+  0 A$mainuild/main$4352                                           1095 GR
+  0 A$mainuild/main$4353                                           1096 GR
+  0 A$mainuild/main$4357                                           1097 GR
+  0 A$mainuild/main$4361                                           109A GR
+  0 A$mainuild/main$4362                                           109D GR
+  0 A$mainuild/main$4366                                           10A0 GR
+  0 A$mainuild/main$4367                                           10A3 GR
+  0 A$mainuild/main$4371                                           10A6 GR
+  0 A$mainuild/main$4372                                           10A8 GR
+  0 A$mainuild/main$4376                                           10AB GR
+  0 A$mainuild/main$4377                                           10AE GR
+  0 A$mainuild/main$4378                                           10AF GR
+  0 A$mainuild/main$4379                                           10B2 GR
+  0 A$mainuild/main$4380                                           10B3 GR
+  0 A$mainuild/main$4381                                           10B6 GR
+  0 A$mainuild/main$4382                                           10B7 GR
+  0 A$mainuild/main$4386                                           10B8 GR
+  0 A$mainuild/main$4390                                           10BB GR
+  0 A$mainuild/main$4391                                           10BE GR
+  0 A$mainuild/main$4395                                           10C1 GR
+  0 A$mainuild/main$4396                                           10C2 GR
+  0 A$mainuild/main$4397                                           10C3 GR
+  0 A$mainuild/main$4398                                           10C4 GR
+  0 A$mainuild/main$4399                                           10C7 GR
+  0 A$mainuild/main$4400                                           10C8 GR
+  0 A$mainuild/main$4401                                           10CB GR
+  0 A$mainuild/main$4402                                           10CC GR
+  0 A$mainuild/main$4406                                           10CD GR
+  0 A$mainuild/main$4407                                           10D0 GR
+  0 A$mainuild/main$4411                                           10D3 GR
+  0 A$mainuild/main$4412                                           10D6 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 3.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 A$mainuild/main$4416                                           10D9 GR
+  0 A$mainuild/main$4420                                           10DC GR
+  0 A$mainuild/main$4421                                           10DF GR
+  0 A$mainuild/main$4422                                           10E0 GR
+  0 A$mainuild/main$4426                                           10E3 GR
+  0 A$mainuild/main$4427                                           10E6 GR
+  0 A$mainuild/main$4428                                           10E7 GR
+  0 A$mainuild/main$4432                                           10EA GR
+  0 A$mainuild/main$4433                                           10ED GR
+  0 A$mainuild/main$4434                                           10EE GR
+  0 A$mainuild/main$4435                                           10F1 GR
+  0 A$mainuild/main$4443                                           10F2 GR
+  0 A$mainuild/main$4444                                           10F6 GR
+  0 A$mainuild/main$4445                                           10F9 GR
+  0 A$mainuild/main$4446                                           10FB GR
+  0 A$mainuild/main$4447                                           10FE GR
+  0 A$mainuild/main$4448                                           10FF GR
+  0 A$mainuild/main$4449                                           1100 GR
+  0 A$mainuild/main$4450                                           1101 GR
+  0 A$mainuild/main$4451                                           1103 GR
+  0 A$mainuild/main$4455                                           1105 GR
+  0 A$mainuild/main$4456                                           1108 GR
+  0 A$mainuild/main$4457                                           1109 GR
+  0 A$mainuild/main$4461                                           110C GR
+  0 A$mainuild/main$4462                                           110F GR
+  0 A$mainuild/main$4463                                           1110 GR
+  0 A$mainuild/main$4464                                           1111 GR
+  0 A$mainuild/main$4465                                           1112 GR
+  0 A$mainuild/main$4466                                           1113 GR
+  0 A$mainuild/main$4467                                           1114 GR
+  0 A$mainuild/main$4468                                           1117 GR
+  0 A$mainuild/main$4469                                           1118 GR
+  0 A$mainuild/main$4470                                           111B GR
+  0 A$mainuild/main$4471                                           111C GR
+  0 A$mainuild/main$4472                                           111D GR
+  0 A$mainuild/main$4473                                           1120 GR
+  0 A$mainuild/main$4474                                           1123 GR
+  0 A$mainuild/main$4475                                           1124 GR
+  0 A$mainuild/main$4476                                           1125 GR
+  0 A$mainuild/main$4477                                           1128 GR
+  0 A$mainuild/main$4478                                           1129 GR
+  0 A$mainuild/main$4479                                           112C GR
+  0 A$mainuild/main$4480                                           112D GR
+  0 A$mainuild/main$4484                                           112E GR
+  0 A$mainuild/main$4485                                           1131 GR
+  0 A$mainuild/main$4490                                           1134 GR
+  0 A$mainuild/main$4491                                           1136 GR
+  0 A$mainuild/main$4492                                           1139 GR
+  0 A$mainuild/main$4493                                           113A GR
+  0 A$mainuild/main$4494                                           113C GR
+  0 A$mainuild/main$4498                                           113E GR
+  0 A$mainuild/main$4499                                           113F GR
+  0 A$mainuild/main$4500                                           1140 GR
+  0 A$mainuild/main$4501                                           1142 GR
+  0 A$mainuild/main$4502                                           1143 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 4.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 A$mainuild/main$4503                                           1145 GR
+  0 A$mainuild/main$4504                                           1146 GR
+  0 A$mainuild/main$4505                                           1147 GR
+  0 A$mainuild/main$4506                                           114A GR
+  0 A$mainuild/main$4507                                           114B GR
+  0 A$mainuild/main$4512                                           114C GR
+  0 A$mainuild/main$4513                                           114E GR
+  0 A$mainuild/main$4514                                           1151 GR
+  0 A$mainuild/main$4515                                           1152 GR
+  0 A$mainuild/main$4516                                           1154 GR
+  0 A$mainuild/main$4520                                           1156 GR
+  0 A$mainuild/main$4521                                           1157 GR
+  0 A$mainuild/main$4522                                           1158 GR
+  0 A$mainuild/main$4523                                           115A GR
+  0 A$mainuild/main$4524                                           115B GR
+  0 A$mainuild/main$4525                                           115D GR
+  0 A$mainuild/main$4526                                           115E GR
+  0 A$mainuild/main$4527                                           115F GR
+  0 A$mainuild/main$4528                                           1162 GR
+  0 A$mainuild/main$4529                                           1163 GR
+  0 A$mainuild/main$4534                                           1164 GR
+  0 A$mainuild/main$4535                                           1166 GR
+  0 A$mainuild/main$4536                                           1169 GR
+  0 A$mainuild/main$4537                                           116A GR
+  0 A$mainuild/main$4538                                           116C GR
+  0 A$mainuild/main$4542                                           116E GR
+  0 A$mainuild/main$4543                                           116F GR
+  0 A$mainuild/main$4544                                           1170 GR
+  0 A$mainuild/main$4545                                           1172 GR
+  0 A$mainuild/main$4546                                           1173 GR
+  0 A$mainuild/main$4547                                           1175 GR
+  0 A$mainuild/main$4548                                           1176 GR
+  0 A$mainuild/main$4549                                           1177 GR
+  0 A$mainuild/main$4550                                           117A GR
+  0 A$mainuild/main$4551                                           117B GR
+  0 A$mainuild/main$4556                                           117C GR
+  0 A$mainuild/main$4557                                           117E GR
+  0 A$mainuild/main$4558                                           1181 GR
+  0 A$mainuild/main$4559                                           1182 GR
+  0 A$mainuild/main$4560                                           1184 GR
+  0 A$mainuild/main$4564                                           1186 GR
+  0 A$mainuild/main$4565                                           1187 GR
+  0 A$mainuild/main$4566                                           1188 GR
+  0 A$mainuild/main$4567                                           118A GR
+  0 A$mainuild/main$4568                                           118B GR
+  0 A$mainuild/main$4569                                           118D GR
+  0 A$mainuild/main$4570                                           118E GR
+  0 A$mainuild/main$4571                                           118F GR
+  0 A$mainuild/main$4572                                           1192 GR
+  0 A$mainuild/main$4573                                           1193 GR
+  0 A$mainuild/main$4578                                           1194 GR
+  0 A$mainuild/main$4579                                           1196 GR
+  0 A$mainuild/main$4580                                           1199 GR
+  0 A$mainuild/main$4581                                           119A GR
+  0 A$mainuild/main$4582                                           119C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 5.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 A$mainuild/main$4586                                           119E GR
+  0 A$mainuild/main$4587                                           119F GR
+  0 A$mainuild/main$4588                                           11A0 GR
+  0 A$mainuild/main$4589                                           11A2 GR
+  0 A$mainuild/main$4590                                           11A3 GR
+  0 A$mainuild/main$4591                                           11A5 GR
+  0 A$mainuild/main$4592                                           11A6 GR
+  0 A$mainuild/main$4593                                           11A7 GR
+  0 A$mainuild/main$4594                                           11AA GR
+  0 A$mainuild/main$4595                                           11AB GR
+  0 A$mainuild/main$4600                                           11AC GR
+  0 A$mainuild/main$4601                                           11AF GR
+  0 A$mainuild/main$4605                                           11B2 GR
+  0 A$mainuild/main$4606                                           11B5 GR
+  0 A$mainuild/main$4607                                           11B6 GR
+  0 A$mainuild/main$4612                                           11B7 GR
+  0 A$mainuild/main$94                                             0000 GR
+  0 A$mainuild/main$95                                             0004 GR
+  0 A$mainuild/main$96                                             0006 GR
+  0 A$mainuild/main$97                                             0009 GR
+  0 A$mainuild/main$98                                             000C GR
+  0 A$mainuild/main$99                                             000E GR
+  0 C$main.c$100$1_0$55                                         =  10B8 GR
+  0 C$main.c$101$1_0$55                                         =  10BB GR
+  0 C$main.c$104$1_0$55                                         =  10C1 GR
+  0 C$main.c$105$1_0$55                                         =  10CD GR
+  0 C$main.c$106$1_0$55                                         =  10D3 GR
+  0 C$main.c$107$1_0$55                                         =  10D9 GR
+  0 C$main.c$109$1_0$55                                         =  10DC GR
+  0 C$main.c$110$1_0$55                                         =  10E3 GR
+  0 C$main.c$111$1_0$55                                         =  10EA GR
+  0 C$main.c$114$1_0$55                                         =  10F2 GR
+  0 C$main.c$118$2_0$56                                         =  10F2 GR
+  0 C$main.c$119$3_0$57                                         =  1105 GR
+  0 C$main.c$120$3_0$57                                         =  110C GR
+  0 C$main.c$122$3_0$57                                         =  112E GR
+  0 C$main.c$126$2_0$56                                         =  1134 GR
+  0 C$main.c$127$2_0$56                                         =  113E GR
+  0 C$main.c$129$2_0$56                                         =  114C GR
+  0 C$main.c$130$2_0$56                                         =  1156 GR
+  0 C$main.c$132$2_0$56                                         =  1164 GR
+  0 C$main.c$133$2_0$56                                         =  116E GR
+  0 C$main.c$135$2_0$56                                         =  117C GR
+  0 C$main.c$136$2_0$56                                         =  1186 GR
+  0 C$main.c$138$2_0$56                                         =  1194 GR
+  0 C$main.c$139$2_0$56                                         =  119E GR
+  0 C$main.c$140$2_0$56                                         =  11AC GR
+  0 C$main.c$143$1_0$55                                         =  11B7 GR
+  0 C$main.c$33$0_0$48                                          =  0000 GR
+  0 C$main.c$34$1_0$48                                          =  0000 GR
+  0 C$main.c$35$2_0$49                                          =  0016 GR
+  0 C$main.c$37$1_0$48                                          =  0039 GR
+  0 C$main.c$42$1_0$50                                          =  103B GR
+  0 C$main.c$43$1_0$50                                          =  103B GR
+  0 C$main.c$44$1_0$50                                          =  1042 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 6.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 C$main.c$49$1_0$52                                          =  1043 GR
+  0 C$main.c$52$1_0$52                                          =  1043 GR
+  0 C$main.c$53$2_0$53                                          =  104C GR
+  0 C$main.c$54$2_0$53                                          =  1052 GR
+  0 C$main.c$57$2_0$54                                          =  105A GR
+  0 C$main.c$59$1_0$52                                          =  107A GR
+  0 C$main.c$64$1_0$55                                          =  107B GR
+  0 C$main.c$71$1_0$55                                          =  1080 GR
+  0 C$main.c$79$1_0$55                                          =  1085 GR
+  0 C$main.c$82$1_0$55                                          =  108A GR
+  0 C$main.c$87$1_0$55                                          =  1097 GR
+  0 C$main.c$90$1_0$55                                          =  109A GR
+  0 C$main.c$91$1_0$55                                          =  10A0 GR
+  0 C$main.c$94$1_0$55                                          =  10A6 GR
+  0 C$main.c$97$1_0$55                                          =  10AB GR
+  0 Fmain$__str_0$0_0$0                                         =  11B8 GR
+  0 Fmain$__str_1$0_0$0                                         =  11C7 GR
+  0 Fmain$__str_2$0_0$0                                         =  11DB GR
+  0 Fmain$__str_3$0_0$0                                         =  11E2 GR
+  0 Fmain$__str_4$0_0$0                                         =  11E8 GR
+  7 Fmain$__xinit_g_x$0_0$0                                     =  0004 GR
+  7 Fmain$__xinit_g_y$0_0$0                                     =  0006 GR
+  7 Fmain$__xinit_gcount$0_0$0                                  =  0002 GR
+  7 Fmain$__xinit_gcounter$0_0$0                                =  0000 GR
+  0 G$_putchar$0$0                                              =  1043 GR
+  2 G$g_x$0_0$0                                                 =  0004 GR
+  2 G$g_y$0_0$0                                                 =  0006 GR
+  2 G$gcount$0_0$0                                              =  0002 GR
+  2 G$gcounter$0_0$0                                            =  0000 GR
+  0 G$inc_count$0$0                                             =  103B GR
+  0 G$main$0$0                                                  =  107B GR
   0 G$put_text$0$0                                              =  0000 GR
   0 G$tiles$0_0$0                                               =  003B GR
   0 G$tiles_colors$0_0$0                                        =  083B GR
-  0 XG$main$0$0                                                 =  1079 GR
+  0 XG$_putchar$0$0                                             =  107A GR
+  0 XG$inc_count$0$0                                            =  1042 GR
+  0 XG$main$0$0                                                 =  11B7 GR
   0 XG$put_text$0$0                                             =  0039 GR
-  0 ___str_0                                                       107B R
-  0 _main                                                          103B GR
+    _EFFECTS                                                       **** GX
+    _SONG                                                          **** GX
+  0 ___str_0                                                       11B8 R
+  0 ___str_1                                                       11C7 R
+  0 ___str_2                                                       11DB R
+  0 ___str_3                                                       11E2 R
+  0 ___str_4                                                       11E8 R
+  0 __putchar                                                      1043 GR
+  7 __xinit__g_x                                                   0004 R
+  7 __xinit__g_y                                                   0006 R
+  7 __xinit__gcount                                                0002 R
+  7 __xinit__gcounter                                              0000 R
+  2 _g_x                                                           0004 GR
+  2 _g_y                                                           0006 GR
+  2 _gcount                                                        0002 GR
+  2 _gcounter                                                      0000 GR
+  0 _inc_count                                                     103B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 7.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 _main                                                          107B GR
+    _mplayer_init                                                  **** GX
+    _mplayer_init_effects                                          **** GX
+    _mplayer_play                                                  **** GX
+    _mplayer_play_effect_p                                         **** GX
+    _printf_                                                       **** GX
   0 _put_text                                                      0000 GR
+    _sprintf_                                                      **** GX
   0 _tiles                                                         003B GR
   0 _tiles_colors                                                  083B GR
     _ubox_disable_screen                                           **** GX
@@ -109,25 +378,27 @@ Symbol Table
     _ubox_fill_screen                                              **** GX
     _ubox_init_isr                                                 **** GX
     _ubox_put_tile                                                 **** GX
+    _ubox_read_keys                                                **** GX
     _ubox_set_colors                                               **** GX
     _ubox_set_mode                                                 **** GX
     _ubox_set_tiles                                                **** GX
     _ubox_set_tiles_colors                                         **** GX
+    _ubox_set_user_isr                                             **** GX
     _ubox_wait                                                     **** GX
 
 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 3.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 8.
 Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE                                      size 108A   flags    0
+   0 _CODE                                      size 11EB   flags    0
    1 _DATA                                      size    0   flags    0
-   2 _INITIALIZED                               size    0   flags    0
+   2 _INITIALIZED                               size    8   flags    0
    3 _DABS                                      size    0   flags    8
    4 _HOME                                      size    0   flags    0
    5 _GSINIT                                    size    0   flags    0
    6 _GSFINAL                                   size    0   flags    0
-   7 _INITIALIZER                               size    0   flags    0
+   7 _INITIALIZER                               size    8   flags    0
    8 _CABS                                      size    0   flags    8
 
